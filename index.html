@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/a5abeecb83.js" crossorigin="anonymous"></script>
+  <title>Ped Dogs Project (Assignment 06) design by Samim Mondal</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+  /* Spinner styles */
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+</style>
+</head>
+<body>
+  <header>
+  <section class="w-11/12 mx-auto py-5 flex justify-between">
+    <div class="flex gap-2 h-10 w-10">
+      <img class="w-full h-full gap-2" src="images/logo.webp" alt="">
+      <button class="text-xl font-bold">Peddy</button>
+    </div>
+    <div class="flex gap-4 text-gary-400 ml-4">
+      <button>Home</button>
+      <button>Shop</button>
+      <button>Contact</button>
+    </div>
+    <div class="h-10 w-10">
+      <img class="w-full h-full" src="images/user.png" alt="">
+    </div>
+  </section>
+  </header>
+  <main>
+    <!-- banner section start -->
+  <section class="w-11/12 mx-auto">
+      <div class="text-center py-5">
+        <div class="flex justify-center items-center gap-4">
+          <p class="text-xl text-gray-400">Bringing Families Together </p>
+          <div class="h-5 w-5"> <img class="w-full" src="https://img.icons8.com/?size=48&id=QV5JEtrTP6nH&format=png" alt=""></div>
+        
+        </div>
+          <h1 class="text-5xl font-semibold text-[#131313] py-5">Your Path to Adoption <br> Starts Here</h1>
+          <p class="text-[#131313] p-4 ">It is a long established fact that a reader will be distracted by the readable content of a page when looking <br> at its layout. The point of using Peddy pets is that it has a.</p>
+          <button" class="bg-[#0E7A81] p-3 rounded-[10px] text-white py-2"><a href="#adft">View More</a></button>
+       </div>
+       <div class="flex justify-center lg:w-[700px] lg:h-[350px] mx-auto">
+        <img class="w-full" src="images/pet.webp" alt="">
+       </div>
+       <div class="text-center">
+        <h2 id="adft" class="text-[#131313] mb-3 font-semibold text-3xl">Adopt  Your  Best Friend</h2>
+        <p class="text-[#131313B3] mb-5">It is a long established fact that a reader will be distracted by the readable content of a <br> page when looking at its layout. The point of using  pets is that it has a.</p>
+       </div>
+  </section>
+    <!-- banner section end -->
+
+    <!-- category button  -->
+     <div id="button-container" class="w-11/12 lg:mx-auto  lg:flex justify-between items-center py-2 gap-3 grid grid-cols-2 md:grid-cols-2 p-3">
+
+     </div>
+     <!-- short by -->
+      <div class="w-11/12 mx-auto lg:flex justify-between mb-5  gap-3 mt-4 grid grid-cols-1 md:grid-cols-2">
+        <button class="text-[#131313] font-semibold text-xl">Best Deal For you</button>
+        <button id="shortById" class="bg-[#0E7A81] p-3 text-white rounded-lg">Sort by Price</button>
+      </div>
+    
+      <div class="w-20 h-20 mx-auto spinner flex items-center" id="spinner"></div>
+      
+      <!-- all peds card -->
+      <section class="w-11/12 mx-auto flex ">
+        <div id="all-pets" class="w-[75%] min-h-96 gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  rounded-lg p-4 relative">
+
+       
+      
+         
+        </div>
+       <div class="w-[25%] p-4 mt-4 rounded-lg border">
+        <div id="like-imageContainer" class=" gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2   ">
+
+        </div>
+       </div>
+
+      </section>
+      <!-- Open the modal using ID.showModal() method -->
+<dialog id="modal" class="modal">
+  <div class="modal-box">
+    <div class="flex justify-center items-center">
+      <img src="https://img.icons8.com/?size=48&id=kLORTzuNOM2d&format=png" alt="">
+    </div>
+    <h3 class=" font-bold text-2xl text-center mt-4">Congratulations</h3>
+    <p class="text-center font-bold text-xl mt-3">Adoption Process is Start for Your Pet </p>
+    <p id="BtnCount" class="text-center mt-3 mb-4 text-xl font-bold">3</p>
+    
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
+
+      <!-- Open the modal using ID.showModal() method -->
+      
+<dialog id="modalData" class="modal">
+  
+</dialog>
+  </main>
+  <footer class="w-full bg-black mt-5 ">
+   
+      <section class="w-11/12 mx-auto text-white gap-4 p-4">
+      <div class="lg:flex justify-between items-center">
+        <div class="w-[30%]">
+          <div class="flex  gap-3">
+            <img src="images/logo.webp" alt="">
+            <p class="text-xl font-bold mt-2">Peddy</p>
+           </div>
+           <div class="mt-4 w-full mx-auto">
+            <div>
+            <p class="w-[350px]">Location: av. Washington 165, NY CA 54003</p>
+            <p class="w-[350px]">Phone: +31 85 964 47 25</p>
+            <p class="w-[350px]">Email: info@yourdomain.com</p>
+            <p class="w-[350px]"> Openings hours: 9.00 AM - 5.00 PM</p>
+            </div>
+            </div>
+            <div class="mt-2 p-1 flex mb-4">
+              <a href=""><i class="fa-brands fa-facebook text-2xl font-bold" style="color: #74C0FC;"></i></a>
+              <i class="fa-brands fa-x-twitter text-2xl ml-5"></i>
+              <a href=""></a>
+              <a href=""><i class="fa-brands fa-youtube ml-5 text-2xl font-bold" style="color: #e10008;"></i></a>
+              <a href=""><i class="fa-brands fa-square-instagram ml-5 text-2xl font-bold" style="color: #f2c29a;"></i></a>
+            </div>
+        </div>
+        <div class="w-30%">
+         <div>
+          <h3 class="text-2xl font-bold mb-3">Useful Links</h3>
+          <p>Home</p>
+          <p>About Us</p>
+          <p>Animals</p>
+          <p>Foundation</p>
+          <p>Contact</p>
+         </div>
+        </div>
+        <div class="w-30%">
+         <div>
+          <h3 class="text-2xl font-bold mb-3">Drop a Message</h3>
+          <input class="p-4 w-[250px] h-[50px] rounded-lg mt-2 bg-gray-500 text-white" type="text" placeholder="enter your message"> <br>
+          <button class="font-bold p-3 text-white bg-[#0E7A81] rounded-lg w-[250px] h-[50px] mt-3">Subscribe</button>
+         </div>
+        </div>
+      </div>
+    
+      </section>
+    </div>
+
+
+  </footer>
+  <script src="./js/index.js"></script>
+  <script src="js/function.js"></script>
+
+  
+</body>
+</html>
